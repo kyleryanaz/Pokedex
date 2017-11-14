@@ -10,6 +10,7 @@ export class Pokedex extends Component {
 
     this.updateQuery = this.updateQuery.bind(this);
     this.submitQuery = this.submitQuery.bind(this);
+    this.searchFireDex = this.searchFireDex.bind(this);
   }
 
   updateQuery(event) {
@@ -29,6 +30,21 @@ export class Pokedex extends Component {
       });
     // clears the input on submit
     event.target.elements["query"].value = "";
+  }
+
+  searchFireDex(event) {
+    event.preventDefault();
+    fireDex
+      .database()
+      .ref("Pokemon")
+      .orderByChild("name")
+      .equalTo("Ivysaur")
+      .on("value", function(snapshot) {
+        console.log(snapshot.val());
+        snapshot.forEach(function(data) {
+          console.log(data.key);
+        });
+      });
   }
 
   render() {
@@ -59,7 +75,7 @@ export class Pokedex extends Component {
         <div class="row">
           <div class="col s4" />
           <div class="col s4">
-            <form id="chatForm" onSubmit={this.submitQuery}>
+            <form id="chatForm" onSubmit={this.searchFireDex}>
               <input
                 id="query"
                 onChange={this.updateQuery}
