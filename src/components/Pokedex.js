@@ -9,7 +9,6 @@ export class Pokedex extends Component {
     };
 
     this.updateQuery = this.updateQuery.bind(this);
-    this.submitQuery = this.submitQuery.bind(this);
     this.searchFireDex = this.searchFireDex.bind(this);
   }
 
@@ -20,31 +19,21 @@ export class Pokedex extends Component {
     });
   }
 
-  submitQuery(event) {
-    event.preventDefault();
-    fireDex
-      .database()
-      .ref(`Query`)
-      .push({
-        query: this.state.query || ""
-      });
-    // clears the input on submit
-    event.target.elements["query"].value = "";
-  }
-
   searchFireDex(event) {
     event.preventDefault();
     fireDex
       .database()
       .ref("Pokemon")
       .orderByChild("name")
-      .equalTo("Ivysaur")
+      .equalTo(this.state.query)
       .on("value", function(snapshot) {
         console.log(snapshot.val());
         snapshot.forEach(function(data) {
           console.log(data.key);
         });
       });
+    // clears the input on submit
+    event.target.elements["query"].value = "";
   }
 
   render() {
