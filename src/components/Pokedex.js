@@ -25,7 +25,7 @@ export class Pokedex extends Component {
       .database()
       .ref(`Query`)
       .push({
-        query: this.state.query
+        query: this.state.query || ""
       });
     // clears the input on submit
     event.target.elements["query"].value = "";
@@ -33,18 +33,46 @@ export class Pokedex extends Component {
 
   render() {
     return (
-      <div>
-        <form id="chatForm" onSubmit={this.submitQuery}>
-          <input
-            id="query"
-            onChange={this.updateQuery}
-            type="text"
-            placeholder="Search"
-            required
-            autoComplete="off"
-          />
-          <button type="submit">Test</button>
-        </form>
+      <div class="container">
+        <div class="row">
+          <div class="col s12" />
+        </div>
+        <div class="row">
+          <div class="col s4" />
+          <div class="col s4">
+            <div class="card">
+              <div class="card-image">
+                <img src="" alt="PokemonProfile" />
+              </div>
+              <div class="card-action">
+                <p id="name">Bulbasaur</p>
+                <p id="number">#001</p>
+                <p id="type">Grass</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4" />
+        </div>
+        <div class="row">
+          <div class="col s12" />
+        </div>
+        <div class="row">
+          <div class="col s4" />
+          <div class="col s4">
+            <form id="chatForm" onSubmit={this.submitQuery}>
+              <input
+                id="query"
+                onChange={this.updateQuery}
+                type="text"
+                placeholder="Search"
+                required
+                autoComplete="off"
+              />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="col s4" />
+        </div>
       </div>
     );
   }
