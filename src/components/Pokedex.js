@@ -9,7 +9,8 @@ export class Pokedex extends Component {
       name: "",
       number: "",
       type1: "",
-      type2: ""
+      type2: "",
+      sprite: ""
     };
 
     this.updateQuery = this.updateQuery.bind(this);
@@ -37,12 +38,14 @@ export class Pokedex extends Component {
           data.push(ss.child("name").val());
           data.push(ss.child("type1").val());
           data.push(ss.child("type2").val());
+          data.push(ss.child("sprite").val());
           this.setState({
             ...this.state,
             number: data[0],
             name: data[1],
             type1: data[2],
-            type2: data[3]
+            type2: data[3],
+            sprite: data[4]
           });
         });
         console.log(data);
@@ -61,7 +64,7 @@ export class Pokedex extends Component {
           <div class="col s4">
             <div class="card">
               <div class="card-image">
-                <img src="" alt="PokemonProfile" />
+                <img src={this.state.sprite} alt="Sprite" />
               </div>
               <div class="card-action">
                 <p id="name">{this.state.name}</p>
