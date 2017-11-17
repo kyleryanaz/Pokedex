@@ -26,13 +26,15 @@ export class Pokedex extends Component {
       .ref("Pokemon")
       .orderByChild("name")
       .equalTo(this.state.query)
-      .on("value", function(snapshot) {
-        console.log(snapshot.val());
-        snapshot.forEach(function(data) {
-          console.log(data.key);
+      .on("value", snapshot => {
+        var data = [];
+        snapshot.forEach(ss => {
+          data.push(ss.key);
+          data.push(ss.child("name").val());
+          data.push(ss.child("type1").val());
         });
+        console.log(data);
       });
-    // clears the input on submit
     event.target.elements["query"].value = "";
   }
 
