@@ -5,7 +5,11 @@ export class Pokedex extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      props: props
+      props: props,
+      name: "",
+      number: "",
+      type1: "",
+      type2: ""
     };
 
     this.updateQuery = this.updateQuery.bind(this);
@@ -32,6 +36,14 @@ export class Pokedex extends Component {
           data.push(ss.key);
           data.push(ss.child("name").val());
           data.push(ss.child("type1").val());
+          data.push(ss.child("type2").val());
+          this.setState({
+            ...this.state,
+            number: data[0],
+            name: data[1],
+            type1: data[2],
+            type2: data[3]
+          });
         });
         console.log(data);
       });
@@ -52,9 +64,10 @@ export class Pokedex extends Component {
                 <img src="" alt="PokemonProfile" />
               </div>
               <div class="card-action">
-                <p id="name">Bulbasaur</p>
-                <p id="number">#001</p>
-                <p id="type">Grass</p>
+                <p id="name">{this.state.name}</p>
+                <p id="number">{this.state.number}</p>
+                <p id="type1">{this.state.type1}</p>
+                <p id="type2">{this.state.type2}</p>
               </div>
             </div>
           </div>
