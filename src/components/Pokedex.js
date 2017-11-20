@@ -62,39 +62,47 @@ export class Pokedex extends Component {
         <div class="row">
           <div class="col s4" />
           <div class="col s4">
-            <div class="card">
+            <div id="screen" class="card">
               <div class="card-image">
                 <img src={this.state.sprite} alt="Sprite" />
               </div>
-              <div class="card-action">
-                <p id="name">{this.state.name}</p>
-                <p id="number">{this.state.number}</p>
-                <p id="type1">{this.state.type1}</p>
-                <p id="type2">{this.state.type2}</p>
+            </div>
+            <div class="col s4" />
+          </div>
+          <div class="row">
+            <div class="col s12" />
+          </div>
+          <div class="row">
+            <div class="col s4" />
+            <div class="col s4">
+              <form id="chatForm" onSubmit={this.searchFireDex}>
+                <input
+                  id="query"
+                  onChange={this.updateQuery}
+                  type="text"
+                  placeholder="Search"
+                  required
+                  autoComplete="off"
+                />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="col s4" />
+          </div>
+          <div class="row">
+            <div class="col s4" />
+            <div class="col s4">
+              <div class="card">
+                <div class="card-action">
+                  <p id="name">{this.state.name}</p>
+                  <p id="number">{this.state.number}</p>
+                  <p id="type1">{this.state.type1}</p>
+                  <p id="type2">{this.state.type2}</p>
+                </div>
               </div>
             </div>
+            <div class="col s4" />
           </div>
-          <div class="col s4" />
-        </div>
-        <div class="row">
-          <div class="col s12" />
-        </div>
-        <div class="row">
-          <div class="col s4" />
-          <div class="col s4">
-            <form id="chatForm" onSubmit={this.searchFireDex}>
-              <input
-                id="query"
-                onChange={this.updateQuery}
-                type="text"
-                placeholder="Search"
-                required
-                autoComplete="off"
-              />
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-          <div class="col s4" />
         </div>
       </div>
     );
