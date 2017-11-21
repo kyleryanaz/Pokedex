@@ -65,7 +65,7 @@ export class Pokedex extends Component {
           <div class="col s4">
             <div id="spriteScreen" class="card">
               <div class="card-image">
-                <img src={this.state.sprite} alt="sprite" />
+                <img id="spriteImage" src={this.state.sprite} alt="sprite" />
               </div>
             </div>
             <div class="col s4" />
