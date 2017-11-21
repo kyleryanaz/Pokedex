@@ -10,7 +10,7 @@ export class Pokedex extends Component {
       number: "",
       type1: "",
       type2: "",
-      sprite: ""
+      sprite: "https://firebasestorage.googleapis.com/v0/b/pokedex-7a383.appspot.com/o/screenfillers%2FWhiteSpace.png?alt=media&token=e61de22b-2161-4993-8877-e5359785a081"
     };
 
     this.updateQuery = this.updateQuery.bind(this);
