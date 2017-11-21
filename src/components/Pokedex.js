@@ -61,14 +61,14 @@ export class Pokedex extends Component {
           <div class="col s12" />
         </div>
         <div class="row">
-          <div class="col s4" />
-          <div class="col s4">
+          <div class="col s2 l4" />
+          <div class="col s8 l4">
             <div id="spriteScreen" class="card">
               <div class="card-image">
                 <img id="spriteImage" src={this.state.sprite} alt="sprite" />
               </div>
             </div>
-            <div class="col s4" />
+            <div class="col s2 l4" />
           </div>
           <div class="row">
             <div class="col s12" />
