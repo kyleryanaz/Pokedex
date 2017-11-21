@@ -58,7 +58,23 @@ export class Pokedex extends Component {
     return (
       <div class="container">
         <div class="row">
-          <div class="col s12" />
+          <div class="col l12" />
+        </div>
+        <div id="topLights" class="row">
+          <div class="col s2 l4" />
+          <div id="topLightBlue" class="col s1 l1">
+            1
+          </div>
+          <div id="topLightRed" class="col s1 l1">
+            2
+          </div>
+          <div id="topLightYellow" class="col s1 l1">
+            3
+          </div>
+          <div id="topLightGreen" class="col s1 l1">
+            4
+          </div>
+          <div class="col s2 l4" />
         </div>
         <div class="row">
           <div class="col s2 l4" />
@@ -71,11 +87,11 @@ export class Pokedex extends Component {
             <div class="col s2 l4" />
           </div>
           <div class="row">
-            <div class="col s12" />
+            <div class="col l12" />
           </div>
           <div class="row">
-            <div class="col s4" />
-            <div class="col s4">
+            <div class="col s2 l4" />
+            <div class="col s8 l4">
               <form id="chatForm" onSubmit={this.searchFireDex}>
                 <input
                   id="query"
@@ -88,11 +104,11 @@ export class Pokedex extends Component {
                 <button type="submit">Search</button>
               </form>
             </div>
-            <div class="col s4" />
+            <div class="col s2 l4" />
           </div>
           <div class="row">
-            <div class="col s4" />
-            <div class="col s4">
+            <div class="col s2 l4" />
+            <div class="col s8 l4">
               <div id="infoScreen" class="card">
                 <div class="card-action">
                   <p id="name">{this.state.name}</p>
@@ -102,7 +118,7 @@ export class Pokedex extends Component {
                 </div>
               </div>
             </div>
-            <div class="col s4" />
+            <div class="col s2 l4" />
           </div>
         </div>
       </div>

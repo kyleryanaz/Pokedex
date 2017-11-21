@@ -20,3 +20,44 @@ body {
 #spriteImage {
   border-radius: 100em;
 }
+
+#topLights {
+  text-align: center;
+}
+
+#topLightBlue {
+  background-color: #00b0ff;
+  color: #00b0ff;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 5em;
+  height: 5em;
+  width: 5em;
+}
+#topLightRed {
+  background-color: red;
+  color: red;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+}
+#topLightYellow {
+  background-color: yellow;
+  color: yellow;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+}
+#topLightGreen {
+  background-color: #64dd17;
+  color: #64dd17;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 3em;
+  height: 3em;
+  width: 3em;
+}
