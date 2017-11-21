@@ -4,6 +4,15 @@ body {
   font-family: sans-serif;
 }
 
-#screen {
+#spriteScreen {
   background-color: white;
+  border-style: solid;
+  border-width: 1.5em;
+  border-color: #bdbdbd;
+  border-radius: 1em 1em 1em 5em;
+}
+
+#infoScreen {
+  background-color: #81c784;
+  color: #1b5e20;
 }

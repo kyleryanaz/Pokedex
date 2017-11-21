@@ -10,7 +10,8 @@ export class Pokedex extends Component {
       number: "",
       type1: "",
       type2: "",
-      sprite: "https://firebasestorage.googleapis.com/v0/b/pokedex-7a383.appspot.com/o/screenfillers%2FWhiteSpace.png?alt=media&token=e61de22b-2161-4993-8877-e5359785a081"
+      sprite:
+        "https://firebasestorage.googleapis.com/v0/b/pokedex-7a383.appspot.com/o/screenfillers%2FWhiteSpace.png?alt=media&token=e61de22b-2161-4993-8877-e5359785a081"
     };
 
     this.updateQuery = this.updateQuery.bind(this);
@@ -62,9 +63,9 @@ export class Pokedex extends Component {
         <div class="row">
           <div class="col s4" />
           <div class="col s4">
-            <div id="screen" class="card">
+            <div id="spriteScreen" class="card">
               <div class="card-image">
-                <img src={this.state.sprite} alt="Sprite" />
+                <img src={this.state.sprite} alt="sprite" />
               </div>
             </div>
             <div class="col s4" />
@@ -84,7 +85,7 @@ export class Pokedex extends Component {
                   required
                   autoComplete="off"
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">Search</button>
               </form>
             </div>
             <div class="col s4" />
@@ -92,7 +93,7 @@ export class Pokedex extends Component {
           <div class="row">
             <div class="col s4" />
             <div class="col s4">
-              <div class="card">
+              <div id="infoScreen" class="card">
                 <div class="card-action">
                   <p id="name">{this.state.name}</p>
                   <p id="number">{this.state.number}</p>
