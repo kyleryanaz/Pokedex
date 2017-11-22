@@ -30,34 +30,34 @@ body {
   color: #00b0ff;
   border-color: #bdbdbd;
   border-style: solid;
-  border-radius: 5em;
-  height: 5em;
-  width: 5em;
+  border-radius: 4em;
+  height: 4em;
+  width: 4em;
 }
 #topLightRed {
   background-color: red;
   color: red;
   border-color: #bdbdbd;
   border-style: solid;
-  border-radius: 3em;
-  height: 3em;
-  width: 3em;
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
 }
 #topLightYellow {
   background-color: yellow;
   color: yellow;
   border-color: #bdbdbd;
   border-style: solid;
-  border-radius: 3em;
-  height: 3em;
-  width: 3em;
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
 }
 #topLightGreen {
   background-color: #64dd17;
   color: #64dd17;
   border-color: #bdbdbd;
   border-style: solid;
-  border-radius: 3em;
-  height: 3em;
-  width: 3em;
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
 }
