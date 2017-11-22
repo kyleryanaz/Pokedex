@@ -89,6 +89,16 @@ export class Pokedex extends Component {
           <div class="row">
             <div class="col l12" />
           </div>
+          <div id="bottomLights" class="row">
+            <div class="col s2 l4" />
+            <div id="bottomLightLeft" class="col s2 l2">
+              1
+            </div>
+            <div id="bottomLightRight" class="col s2 l2">
+              4
+            </div>
+            <div class="col s2 l4" />
+          </div>
           <div class="row">
             <div class="col s2 l4" />
             <div class="col s8 l4">

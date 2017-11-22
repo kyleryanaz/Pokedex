@@ -25,6 +25,10 @@ body {
   text-align: center;
 }
 
+#bottomLights {
+  text-align: center;
+}
+
 #topLightBlue {
   background-color: #00b0ff;
   color: #00b0ff;
@@ -60,4 +64,20 @@ body {
   border-radius: 2em;
   height: 2em;
   width: 2em;
+}
+
+#bottomLightLeft {
+  background-color: red;
+  color: red;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 5em;
+}
+
+#bottomLightRight {
+  background-color: blue;
+  color: blue;
+  border-color: #bdbdbd;
+  border-style: solid;
+  border-radius: 5em;
 }
