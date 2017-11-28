@@ -16,6 +16,11 @@ export class Pokedex extends Component {
 
     this.updateQuery = this.updateQuery.bind(this);
     this.searchFireDex = this.searchFireDex.bind(this);
+    this.typeLightSwitch = this.typeLightSwitch.bind(this);
+  }
+
+  typeLightSwitch(event) {
+    console.log("typeSwitch");
   }
 
   updateQuery(event) {
@@ -111,7 +116,9 @@ export class Pokedex extends Component {
                   required
                   autoComplete="off"
                 />
-                <button type="submit">Search</button>
+                <button onClick={this.typeLightSwitch} type="submit">
+                  Search
+                </button>
               </form>
             </div>
             <div class="col s2 l4" />
