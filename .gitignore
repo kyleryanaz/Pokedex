@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 
-.README.md
+README.md
 
 # testing
 /coverage
